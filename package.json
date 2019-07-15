@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "workspaces": [
+    "demo",
+    "gatsby-theme-auth0"
+  ],
+  "scripts": {
+    "dev": "yarn workspace demo dev",
+    "build": "yarn workspace demo build",
+    "format": "pretty-quick"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "husky": "^3.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.3"
+  },
+  "author": "Emmanuel Pilande",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epilande/gatsby-theme-auth0"
+  },
+  "bugs": {
+    "url": "https://github.com/epilande/gatsby-theme-auth0/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
