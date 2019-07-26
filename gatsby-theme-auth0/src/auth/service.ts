@@ -1,5 +1,6 @@
 import * as auth0 from "auth0-js";
 import { navigate } from "gatsby";
+import { config } from "./config";
 
 const isBrowser = typeof window !== "undefined";
 
@@ -15,14 +16,7 @@ class Auth {
   public sessionStateCallback = (_state: SessionState) => {};
 
   private auth0 = process.env.AUTH0_DOMAIN
-    ? new auth0.WebAuth({
-        domain: process.env.AUTH0_DOMAIN!,
-        clientID: process.env.AUTH0_CLIENT_ID!,
-        redirectUri: process.env.AUTH0_CALLBACK_URL!,
-        audience: process.env.AUTH0_AUDIENCE!,
-        responseType: process.env.AUTH0_RESPONSE_TYPE! || "token id_token",
-        scope: process.env.AUTH0_SCOPE! || "openid email profile",
-      })
+    ? new auth0.WebAuth(config)
     : undefined;
 
   public login = () => {
