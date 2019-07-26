@@ -1,13 +1,22 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { WindowLocation } from "@reach/router";
+import AuthService from "../../auth/service";
+import Callback from "../../components/callback";
 
-const CallbackPage = () => {
-  return (
-    <div>
-      <h1>Callback Page</h1>
-      <Link to="/">Home</Link>
-    </div>
-  );
+interface Props {
+  location: WindowLocation;
+}
+
+const CallbackPage: React.FunctionComponent<Props> = props => {
+  const { location } = props;
+
+  React.useEffect(() => {
+    if (/access_token|id_token|error/.test(location.hash)) {
+      AuthService.handleAuthentication();
+    }
+  }, []);
+
+  return <Callback />;
 };
 
 export default CallbackPage;
