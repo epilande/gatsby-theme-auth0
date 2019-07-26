@@ -10,6 +10,7 @@
     "format": "pretty-quick"
   },
   "devDependencies": {
+    "@types/auth0-js": "^9.10.2",
     "@types/node": "^12.6.8",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
