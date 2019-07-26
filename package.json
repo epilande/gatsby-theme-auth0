@@ -22,13 +22,6 @@
   },
   "author": "Emmanuel Pilande",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/epilande/gatsby-theme-auth0"
-  },
-  "bugs": {
-    "url": "https://github.com/epilande/gatsby-theme-auth0/issues"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"

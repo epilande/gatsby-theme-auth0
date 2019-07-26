@@ -20,5 +20,20 @@
     "gatsby-plugin-typescript": "^2.1.2"
   },
   "author": "Emmanuel Pilande",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epilande/gatsby-theme-auth0.git",
+    "directory": "gatsby-theme-auth0"
+  },
+  "bugs": {
+    "url": "https://github.com/epilande/gatsby-theme-auth0/issues"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "auth0",
+    "react"
+  ]
 }
