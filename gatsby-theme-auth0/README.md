@@ -4,6 +4,10 @@
   <strong>A Gatsby theme for adding Auth0 to your application.</strong>
 </p>
 
+[![GitHub](https://img.shields.io/github/license/epilande/gatsby-theme-auth0?style=flat-square)](https://github.com/epilande/gatsby-theme-auth0/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/gatsby-theme-auth0?style=flat-square)](https://www.npmjs.com/package/gatsby-theme-auth0)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c495103e-b0fc-4378-adea-9845c8c1476c/deploy-status)](https://app.netlify.com/sites/gatsby-theme-auth0/deploys)
+
 ## Installation
 
 ```sh
