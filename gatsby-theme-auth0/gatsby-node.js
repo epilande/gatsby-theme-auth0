@@ -1,3 +1,11 @@
+const checkRequiredCreds = creds => {
+  Object.entries(creds).map(([key, value]) => {
+    if (!value) {
+      throw new Error(`Required option "${key}" not specified`);
+    }
+  });
+};
+
 exports.onCreateWebpackConfig = ({ plugins, actions }, options) => {
   const {
     domain,
@@ -7,6 +15,8 @@ exports.onCreateWebpackConfig = ({ plugins, actions }, options) => {
     responseType,
     scope,
   } = options;
+
+  checkRequiredCreds({ domain, clientID, redirectUri });
 
   actions.setWebpackConfig({
     plugins: [
