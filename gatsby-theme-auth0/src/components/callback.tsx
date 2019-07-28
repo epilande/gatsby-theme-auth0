@@ -1,10 +1,10 @@
 import * as React from "react";
+import Spinner from "./spinner";
 
 const Callback = () => {
   return (
-    <div>
-      <h1>Callback Page</h1>
-      <p>Loading...</p>
+    <div style={{ margin: "2rem", textAlign: "center" }}>
+      <Spinner />
     </div>
   );
 };
