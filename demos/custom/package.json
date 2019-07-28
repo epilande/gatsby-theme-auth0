@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "gatsby": "^2.13.25",
+    "gatsby-plugin-typescript": "^2.1.2",
     "gatsby-theme-auth0": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
