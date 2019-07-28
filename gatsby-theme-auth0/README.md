@@ -11,7 +11,13 @@
 [![npm](https://img.shields.io/npm/v/gatsby-theme-auth0?style=flat-square)](https://www.npmjs.com/package/gatsby-theme-auth0)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c495103e-b0fc-4378-adea-9845c8c1476c/deploy-status)](https://app.netlify.com/sites/gatsby-theme-auth0/deploys)
 
-<!-- ## What's included? -->
+## What's in the box?
+
+- 💯 Easy to set up authentication.
+- 🔑 SSO. Try it out with [demo1](https://gatsby-theme-auth0.netlify.com/) & [demo2](https://gatsby-theme-auth0-custom.netlify.com/).
+- 🔋 Batteries included: [`AuthService`](https://github.com/epilande/gatsby-theme-auth0/blob/master/gatsby-theme-auth0/src/auth/service.ts) & [`useAuth`](https://github.com/epilande/gatsby-theme-auth0/blob/master/gatsby-theme-auth0/src/hooks/useAuth.ts).
+- 🤙 [`/auth/callback`](https://github.com/epilande/gatsby-theme-auth0/blob/master/gatsby-theme-auth0/src/pages/auth/callback.tsx) page automatically set up.
+- 🎨 Fully customizable & extendable.
 
 ## Installation
 
@@ -51,9 +57,19 @@ module.exports = {
 | `responseType` | `"token id_token"`       | `false`  | Configure Auth0 `Response Type` |
 | `scope`        | `"openid email profile"` | `false`  | Configure Auth0 `Scope`         |
 
-<!-- ## Provided Routes -->
+## Shadowing
 
-<!-- ## Shadowing -->
+Gatsby Themes has a concept called [**Shadowing**](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/), which allows users to override a file in a gatsby theme. This allows the theme to be fully customizable.
+
+To start shadowing, create a folder with the theme name `gatsby-theme-auth0` in your project's `src` directory.
+
+Now you're able to override any file in the theme. For example, if you want to override the `callback` component, create a file:
+
+```sh
+src/gatsby-theme-auth0/components/callback.js
+```
+
+Here's a demo of that [`demos/custom/src/gatsby-theme-auth0/components/callback.js`](https://github.com/epilande/gatsby-theme-auth0/blob/master/demos/custom/src/gatsby-theme-auth0/components/callback.js)
 
 ## Demos
 
