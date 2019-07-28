@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "demo-custom",
   "private": true,
   "version": "1.0.0",
   "description": "Demo for gatsby-theme-auth0",
@@ -12,7 +12,8 @@
     "gatsby": "^2.13.25",
     "gatsby-theme-auth0": "*",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "shared-ui": "*"
   },
   "author": "Emmanuel Pilande",
   "license": "MIT"

@@ -1,12 +1,12 @@
 {
   "private": true,
   "workspaces": [
-    "demo",
+    "demos/*",
     "gatsby-theme-auth0"
   ],
   "scripts": {
-    "dev": "yarn workspace demo dev",
-    "build": "yarn workspace demo build",
+    "dev": "yarn workspace demo-minimal dev",
+    "build": "yarn workspace demo-minimal build",
     "format": "pretty-quick"
   },
   "devDependencies": {
