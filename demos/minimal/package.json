@@ -1,0 +1,20 @@
+{
+  "name": "demo-minimal",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Minimal demo for gatsby-theme-auth0",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^2.13.25",
+    "gatsby-theme-auth0": "*",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "shared-ui": "*"
+  },
+  "author": "Emmanuel Pilande",
+  "license": "MIT"
+}
