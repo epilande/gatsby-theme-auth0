@@ -1,4 +1,7 @@
-<h1 align="center">gatsby-theme-auth0 🔐</h1>
+<div align="center">
+  <img width="320" src="https://raw.githubusercontent.com/epilande/gatsby-theme-auth0/master/demos/shared-ui/src/GatsbyAuth0.svg">
+  <h1>gatsby-theme-auth0 🔐</h1>
+</div>
 
 <p align="center">
   <strong>A Gatsby theme for adding Auth0 to your application.</strong>
@@ -7,6 +10,8 @@
 [![GitHub](https://img.shields.io/github/license/epilande/gatsby-theme-auth0?style=flat-square)](https://github.com/epilande/gatsby-theme-auth0/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/gatsby-theme-auth0?style=flat-square)](https://www.npmjs.com/package/gatsby-theme-auth0)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c495103e-b0fc-4378-adea-9845c8c1476c/deploy-status)](https://app.netlify.com/sites/gatsby-theme-auth0/deploys)
+
+<!-- ## What's included? -->
 
 ## Installation
 
@@ -46,7 +51,14 @@ module.exports = {
 | `responseType` | `"token id_token"`       | `false`  | Configure Auth0 `Response Type` |
 | `scope`        | `"openid email profile"` | `false`  | Configure Auth0 `Scope`         |
 
+<!-- ## Provided Routes -->
+
 <!-- ## Shadowing -->
+
+## Demos
+
+- **Minimal:** [Demo](https://gatsby-theme-auth0.netlify.com/) | [Code](https://github.com/epilande/gatsby-theme-auth0/tree/master/demos/minimal)
+- **Custom:** [Demo](https://gatsby-theme-auth0-custom.netlify.com/) | [Code](https://github.com/epilande/gatsby-theme-auth0/tree/master/demos/custom)
 
 ## Dev
 
