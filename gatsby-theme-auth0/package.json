@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Gatsby theme for Auth0",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {},
   "peerDependencies": {
     "gatsby": "^2.13.25",
