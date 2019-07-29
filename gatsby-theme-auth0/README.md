@@ -69,7 +69,7 @@ Now you're able to override any file in the theme. For example, if you want to o
 src/gatsby-theme-auth0/components/callback.js
 ```
 
-Here's a demo of that [`demos/custom/src/gatsby-theme-auth0/components/callback.js`](https://github.com/epilande/gatsby-theme-auth0/blob/master/demos/custom/src/gatsby-theme-auth0/components/callback.js)
+Here's a demo of that [`demos/custom/src/gatsby-theme-auth0/components/callback.js`](https://github.com/epilande/gatsby-theme-auth0/blob/master/demos/custom/src/gatsby-theme-auth0/components/callback.tsx)
 
 ## Demos
 
