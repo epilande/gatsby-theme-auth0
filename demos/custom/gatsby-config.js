@@ -9,6 +9,7 @@ require("dotenv").config({
 module.exports = {
   plugins: [
     "gatsby-plugin-typescript",
+    "gatsby-plugin-emotion",
     "gatsby-theme-shared-ui",
     {
       resolve: "gatsby-theme-auth0",
@@ -23,4 +24,9 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    title: "Demo 2",
+    source:
+      "https://github.com/epilande/gatsby-theme-auth0/tree/master/demos/custom",
+  },
 };

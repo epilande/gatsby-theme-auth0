@@ -13,4 +13,9 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    title: "Demo 1",
+    source:
+      "https://github.com/epilande/gatsby-theme-auth0/tree/master/demos/minimal",
+  },
 };
