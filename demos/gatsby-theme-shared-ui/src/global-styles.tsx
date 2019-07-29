@@ -26,6 +26,20 @@ const GlobalStyles = () => {
         p {
           margin-bottom: 1.5rem;
         }
+
+        a {
+          font-weight: 500;
+          border: 0;
+          border-bottom: 0.125rem solid #fff;
+          color: white;
+          margin: auto;
+          text-decoration: none;
+
+          &:hover {
+            border-image: linear-gradient(to right, #663399, #eb5424);
+            border-image-slice: 1;
+          }
+        }
       `}
     />
   );

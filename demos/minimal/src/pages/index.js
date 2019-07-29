@@ -15,9 +15,9 @@ const HomePage = () => {
   return (
     <Layout>
       <Container textAlign="center">
-        <GatsbyAuth0 width="520" style={{ margin: "7rem 0 5rem" }} />
+        <GatsbyAuth0 width="520" style={{ margin: "5rem 0 5rem" }} />
         <h2>Minimal Demo</h2>
-        <Title>gatbsy-theme-auth0</Title>
+        <Title margin="0 0 2.5rem">gatbsy-theme-auth0</Title>
 
         {profile && (
           <P fontWeight="600" position="relative">
