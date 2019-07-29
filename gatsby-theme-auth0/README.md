@@ -16,7 +16,7 @@
 - 💯 Easy to set up authentication.
 - 🔑 SSO. Try it out with [demo1](https://gatsby-theme-auth0.netlify.com/) & [demo2](https://gatsby-theme-auth0-custom.netlify.com/).
 - 🔋 Batteries included: [`AuthService`](https://github.com/epilande/gatsby-theme-auth0/blob/master/gatsby-theme-auth0/src/auth/service.ts) & [`useAuth`](https://github.com/epilande/gatsby-theme-auth0/blob/master/gatsby-theme-auth0/src/hooks/useAuth.ts).
-- 🤙 [`/auth/callback`](https://github.com/epilande/gatsby-theme-auth0/blob/master/gatsby-theme-auth0/src/pages/auth/callback.tsx) page automatically set up.
+- 🤙 [`/auth/callback`](https://github.com/epilande/gatsby-theme-auth0/blob/master/gatsby-theme-auth0/src/pages/auth/callback.tsx) page automatically set up. Configurable via [`callbackPath`](#theme-options)
 - 🎨 Fully customizable & extendable.
 
 ## Installation
@@ -40,6 +40,7 @@ module.exports = {
         // audience: process.env.AUTH0_AUDIENCE, // Optional
         // responseType: process.env.AUTH0_RESPONSE_TYPE, // Optional
         // scope: process.env.AUTH0_SCOPE, // Optional
+        // callbackPath: "/auth/callback", // Optional
       },
     },
   ],
@@ -56,6 +57,7 @@ module.exports = {
 | `audience`     |                          | `false`  | Configure Auth0 `Audience`      |
 | `responseType` | `"token id_token"`       | `false`  | Configure Auth0 `Response Type` |
 | `scope`        | `"openid email profile"` | `false`  | Configure Auth0 `Scope`         |
+| `callbackPath` | `"/auth/callback"`       | `false`  | Change callback URL path        |
 
 ## Shadowing
 
