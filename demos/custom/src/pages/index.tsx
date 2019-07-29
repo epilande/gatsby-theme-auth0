@@ -10,7 +10,12 @@ import {
 } from "gatsby-theme-shared-ui";
 
 const HomePage = () => {
-  const { isLoading, isLoggedIn, profile } = useAuth();
+  const { isLoading, isLoggedIn, profile } = useAuth(session => {
+    if (!session.userProfile) {
+      return console.log("Not logged in.");
+    }
+    console.log(`Hello ${session.userProfile.name}!`);
+  });
 
   if (isLoading) {
     return <P>Session loading...</P>;

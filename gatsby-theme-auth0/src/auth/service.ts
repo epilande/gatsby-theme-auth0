@@ -6,6 +6,7 @@ const isBrowser = typeof window !== "undefined";
 
 export interface SessionState {
   isLoggedIn: boolean;
+  userProfile?: auth0.Auth0UserProfile;
   accessToken?: string;
 }
 
@@ -57,6 +58,7 @@ class Auth {
     this.userProfile = authResult.idTokenPayload;
     this.sessionStateCallback({
       isLoggedIn: true,
+      userProfile: this.userProfile,
       accessToken: this.accessToken,
     });
   }
@@ -87,6 +89,7 @@ class Auth {
     localStorage.removeItem("isLoggedIn");
     this.sessionStateCallback({
       isLoggedIn: false,
+      userProfile: undefined,
       accessToken: undefined,
     });
   };
