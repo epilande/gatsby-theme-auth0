@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Container, Title, P } from "shared-ui";
+import { Layout, Container, Title, P } from "gatsby-theme-shared-ui";
 
 const NotFound = () => (
   <Layout>

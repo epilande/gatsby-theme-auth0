@@ -13,7 +13,7 @@
     "gatsby-theme-auth0": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "shared-ui": "*"
+    "gatsby-theme-shared-ui": "*"
   },
   "author": "Emmanuel Pilande",
   "license": "MIT"

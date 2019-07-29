@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const GatsbyAuth0 = props => (
+const GatsbyAuth0 = (props: any) => (
   <svg viewBox="0 0 91 28" {...props}>
     <title>Gatsby + Auth0</title>
     <g fill="none" fillRule="evenodd">
@@ -21,3 +21,5 @@ export const GatsbyAuth0 = props => (
     </g>
   </svg>
 );
+
+export default GatsbyAuth0;

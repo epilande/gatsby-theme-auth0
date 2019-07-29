@@ -1,0 +1,25 @@
+{
+  "name": "gatsby-theme-shared-ui",
+  "version": "1.0.0",
+  "description": "Shared UI for gatsby-theme-auth0 demos",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "peerDependencies": {
+    "gatsby": "^2.13.25",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "gatsby-plugin-emotion": "^4.1.2",
+    "gatsby-plugin-typescript": "^2.1.2"
+  },
+  "devDependencies": {
+    "gatsby": "^2.13.25",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "author": "Emmanuel Pilande",
+  "license": "MIT"
+}

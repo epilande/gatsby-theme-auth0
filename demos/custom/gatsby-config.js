@@ -9,6 +9,7 @@ require("dotenv").config({
 module.exports = {
   plugins: [
     "gatsby-plugin-typescript",
+    "gatsby-theme-shared-ui",
     {
       resolve: "gatsby-theme-auth0",
       options: {

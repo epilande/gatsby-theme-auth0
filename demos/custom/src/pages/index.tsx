@@ -1,22 +1,36 @@
 import * as React from "react";
 import { AuthService, useAuth } from "gatsby-theme-auth0";
+import {
+  Button,
+  Container,
+  Layout,
+  GatsbyAuth0,
+  Title,
+  P,
+} from "gatsby-theme-shared-ui";
 
 const HomePage = () => {
   const { isLoading, isLoggedIn, profile } = useAuth();
 
   if (isLoading) {
-    return <p>Session loading...</p>;
+    return <P>Session loading...</P>;
   }
 
   return (
-    <div>
-      <h1>
-        Demo for <code>gatbsy-theme-auth0</code>
-      </h1>
-      {profile && <p>Hello {profile.name}</p>}
-      {isLoggedIn && <button onClick={AuthService.logout}>Logout</button>}
-      {!isLoggedIn && <button onClick={AuthService.login}>Login</button>}
-    </div>
+    <Layout>
+      <Container textAlign="center">
+        <GatsbyAuth0 width="520" style={{ margin: "7rem 0 5rem" }} />
+        <h2>Custom Demo</h2>
+        <Title>gatbsy-theme-auth0</Title>
+        {profile && (
+          <P fontWeight="600" position="relative">
+            Hello {profile.name}
+          </P>
+        )}
+        {isLoggedIn && <Button onClick={AuthService.logout}>Logout</Button>}
+        {!isLoggedIn && <Button onClick={AuthService.login}>Login</Button>}
+      </Container>
+    </Layout>
   );
 };
 

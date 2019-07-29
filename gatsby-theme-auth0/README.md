@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="320" src="https://raw.githubusercontent.com/epilande/gatsby-theme-auth0/master/demos/shared-ui/src/GatsbyAuth0.svg?sanitize=true">
+  <img width="320" src="https://raw.githubusercontent.com/epilande/gatsby-theme-auth0/master/demos/gatsby-theme-shared-ui/src/GatsbyAuth0.svg?sanitize=true">
   <h1>gatsby-theme-auth0 🔐</h1>
 </div>
 

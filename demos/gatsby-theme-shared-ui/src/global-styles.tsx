@@ -1,7 +1,7 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
 
-export const GlobalStyles = () => {
+const GlobalStyles = () => {
   return (
     <Global
       styles={css`
@@ -30,3 +30,5 @@ export const GlobalStyles = () => {
     />
   );
 };
+
+export default GlobalStyles;
