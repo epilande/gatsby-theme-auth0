@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
-    "@emotion/styled": "^10.0.14",
+    "@emotion/styled": "^10.0.17",
     "gatsby-plugin-emotion": "^4.1.5",
     "gatsby-plugin-typescript": "^2.1.6"
   },
