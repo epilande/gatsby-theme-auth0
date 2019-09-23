@@ -16,7 +16,7 @@
     "react-dom": "^16.9.0"
   },
   "dependencies": {
-    "auth0-js": "^9.11.2",
+    "auth0-js": "^9.11.3",
     "gatsby-plugin-typescript": "^2.1.6"
   },
   "author": "Emmanuel Pilande",
