@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "peerDependencies": {
-    "gatsby": "^2.13.25",
+    "gatsby": "^2.15.20",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
@@ -16,7 +16,7 @@
     "gatsby-plugin-typescript": "^2.1.6"
   },
   "devDependencies": {
-    "gatsby": "^2.13.25",
+    "gatsby": "^2.15.20",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
