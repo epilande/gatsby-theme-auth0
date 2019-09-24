@@ -5,6 +5,7 @@
   "description": "Minimal demo for gatsby-theme-auth0",
   "scripts": {
     "dev": "gatsby develop",
+    "debug": "node --inspect-brk ./node_modules/.bin/gatsby develop",
     "build": "gatsby build",
     "clean": "gatsby clean"
   },
