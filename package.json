@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "dev": "yarn workspace demo-minimal dev",
+    "debug": "yarn workspace demo-minimal debug",
     "build": "yarn workspace demo-minimal build",
     "format": "pretty-quick",
     "lint": "eslint --ext .tsx,.ts gatsby-theme-auth0 demos"
@@ -21,6 +22,7 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-config-react-app": "^4.0.0",
     "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^2.0.1",
     "husky": "^3.0.5",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",

@@ -11,12 +11,14 @@ import {
 } from "gatsby-theme-shared-ui";
 
 const HomePage = () => {
-  const { isLoggedIn, profile } = useAuth(session => {
-    if (!session.userProfile) {
-      return console.log("Not logged in.");
-    }
-    console.log(`Hello ${session.userProfile.name}!`);
-  });
+  const { isLoggedIn, profile } = useAuth();
+
+  if (!isLoggedIn) {
+    return console.log("Not logged in.");
+  } else {
+    // CompactAuth loses the weird + fancy type assurances that the user union type has
+    console.log(`Hello ${profile && profile.name}!`);
+  }
 
   return (
     <Container textAlign="center">

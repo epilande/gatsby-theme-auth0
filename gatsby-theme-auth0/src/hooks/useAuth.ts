@@ -1,41 +1,23 @@
 import * as React from "react";
-import auth, { SessionState } from "../auth/service";
+import { SessionContext } from "../components/SessionProvider";
 
-const useAuth = (stateCallback = (_state: SessionState) => {}) => {
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [isLoggedIn, setIsLoggedIn] = React.useState(auth.isAuthenticated());
-  const [profile, setProfile] = React.useState(auth.getUserProfile());
+interface CompactAuth {
+  isLoading: boolean;
+  isLoggedIn: boolean;
+  profile?: auth0.Auth0UserProfile;
+}
 
-  React.useEffect(() => {
-    // Override `sessionStateCallback` in auth service
-    auth.sessionStateCallback = state => {
-      stateCallback(state);
-      setIsLoggedIn(state.isLoggedIn);
-    };
-
-    (async () => {
-      await auth.checkSession();
-      try {
-        const user = auth.getUserProfile();
-        setProfile(user);
-      } catch (error) {
-        console.log(`Error: ${error}`);
-      }
-
-      setIsLoading(false);
-    })();
-
-    return () => {
-      // Clean up sessionStateCallback
-      auth.sessionStateCallback = () => {};
-    };
-  }, []);
-
-  return {
+/**
+ * React hook for authentication: Fetches the current logged-in state from the Session context provider
+ * Returns the current session loading state, whether the user is logged in, and their profile.
+ */
+const useAuth = (): CompactAuth => {
+  const {
     isLoading,
-    isLoggedIn,
-    profile,
-  };
+    user: { isLoggedIn, profile },
+  } = React.useContext(SessionContext);
+
+  return { isLoading, isLoggedIn, profile };
 };
 
 export default useAuth;

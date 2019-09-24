@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthService, useAuth } from "gatsby-theme-auth0";
+import { useAuth } from "gatsby-theme-auth0";
 import {
   Button,
   Container,
@@ -10,7 +10,8 @@ import {
 } from "gatsby-theme-shared-ui";
 
 const HomePage = () => {
-  const { isLoading, isLoggedIn, profile } = useAuth();
+  const session = useAuth();
+  const { isLoading, user, logout, login } = session;
 
   return (
     <Layout>
@@ -19,18 +20,18 @@ const HomePage = () => {
         <h2>Minimal Demo</h2>
         <Title margin="0 0 2.5rem">gatbsy-theme-auth0</Title>
 
-        {profile && (
+        {user.isLoggedIn && (
           <P fontWeight="600" position="relative">
-            Hello {profile.name}
+            Hello {user.userProfile.name}
           </P>
         )}
 
         {isLoading ? (
           <P>Session loading...</P>
-        ) : isLoggedIn ? (
-          <Button onClick={AuthService.logout}>Logout</Button>
+        ) : user.isLoggedIn ? (
+          <Button onClick={logout}>Logout</Button>
         ) : (
-          <Button onClick={AuthService.login}>Login</Button>
+          <Button onClick={login}>Login</Button>
         )}
       </Container>
     </Layout>
