@@ -7,12 +7,12 @@
   "scripts": {},
   "peerDependencies": {
     "gatsby": "^2.15.20",
-    "react": "^16.9.0",
+    "react": "^16.10.2",
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
     "gatsby": "^2.15.20",
-    "react": "^16.9.0",
+    "react": "^16.10.2",
     "react-dom": "^16.9.0"
   },
   "dependencies": {
