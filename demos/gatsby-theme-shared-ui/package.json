@@ -7,7 +7,7 @@
   "peerDependencies": {
     "gatsby": "^2.15.20",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.11.0"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "gatsby": "^2.15.20",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.11.0"
   },
   "author": "Emmanuel Pilande",
   "license": "MIT"
