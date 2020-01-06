@@ -10,7 +10,7 @@
     "react-dom": "^16.12.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.17",
+    "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.17",
     "gatsby-plugin-emotion": "^4.1.18",
     "gatsby-plugin-typescript": "^2.1.23"
