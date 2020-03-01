@@ -8,10 +8,12 @@ export interface SessionState {
   isLoggedIn: boolean;
   userProfile?: auth0.Auth0UserProfile;
   accessToken?: string;
+  idToken?: string;
 }
 
 class Auth {
   private accessToken?: string;
+  private idToken?: string;
   private userProfile?: auth0.Auth0UserProfile;
 
   public sessionStateCallback = (_state: SessionState) => {};
@@ -49,17 +51,21 @@ class Auth {
 
   public getAccessToken = () => this.accessToken;
 
+  public getIdToken = () => this.idToken;
+
   public getUserProfile = () => this.userProfile;
 
   private setSession(authResult: auth0.Auth0DecodedHash) {
     if (!isBrowser) return;
     localStorage.setItem("isLoggedIn", "true");
     this.accessToken = authResult.accessToken;
+    this.idToken = authResult.idToken;
     this.userProfile = authResult.idTokenPayload;
     this.sessionStateCallback({
       isLoggedIn: true,
       userProfile: this.userProfile,
       accessToken: this.accessToken,
+      idToken: this.idToken,
     });
   }
 
@@ -84,6 +90,7 @@ class Auth {
     if (!isBrowser) return;
     // Remove tokens and user profile
     this.accessToken = undefined;
+    this.idToken = undefined;
     this.userProfile = undefined;
 
     localStorage.removeItem("isLoggedIn");
@@ -91,6 +98,7 @@ class Auth {
       isLoggedIn: false,
       userProfile: undefined,
       accessToken: undefined,
+      idToken: undefined,
     });
   };
 
