@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "peerDependencies": {
     "gatsby": "^2.19.23",
-    "react": "^16.12.0",
+    "react": "^16.13.0",
     "react-dom": "^16.12.0"
   },
   "dependencies": {
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "gatsby": "^2.19.23",
-    "react": "^16.12.0",
+    "react": "^16.13.0",
     "react-dom": "^16.12.0"
   },
   "author": "Emmanuel Pilande",

@@ -17,7 +17,7 @@
     "gatsby-plugin-typescript": "^2.1.23",
     "gatsby-theme-auth0": "*",
     "gatsby-theme-shared-ui": "*",
-    "react": "^16.12.0",
+    "react": "^16.13.0",
     "react-dom": "^16.12.0"
   },
   "author": "Emmanuel Pilande",
