@@ -54,7 +54,7 @@ import React from "react";
 import { AuthService, useAuth } from "gatsby-theme-auth0";
 
 export default () => {
-  const { isLoggedIn, profile } = useAuth();
+  const { isLoading, isLoggedIn, profile } = useAuth();
   return (
     <div>
       {profile && <p>Hello {profile.name}</p>}
@@ -67,6 +67,24 @@ export default () => {
   );
 };
 ```
+
+### AuthService methods
+
+#### getIdToken()
+
+Returns the ID token JWT containing user profile information
+
+#### getAccessToken()
+
+Returns the access token for the API specified by `audience`.
+
+#### getUserProfile()
+
+Get the user's [profile](https://auth0.com/docs/users/references/user-profile-structure).
+
+#### checkSession()
+
+See [the Auth0 documentation](https://auth0.github.io/auth0.js/index.html)
 
 ### Theme options
 
