@@ -47,6 +47,8 @@ module.exports = {
 };
 ```
 
+Beware that if you set the options above, but also have the environment variables with the names above, the environment variable values will override the options from the code.
+
 Set up your login/logout buttons and you're good to go!
 
 ```jsx
