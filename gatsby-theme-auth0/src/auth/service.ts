@@ -28,6 +28,13 @@ class Auth {
     localStorage.setItem("postLoginUrl", window.location.pathname);
     this.auth0 && this.auth0.authorize();
   };
+  
+  public signup = () => {
+    if (!isBrowser) return;
+    // Save postLoginUrl so we can redirect user back to where they left off after signup screen
+    localStorage.setItem("postLoginUrl", window.location.pathname);
+    this.auth0 && this.auth0.authorize({ screen_hint: "signup" });
+  };
 
   public handleAuthentication = () =>
     new Promise((resolve, reject) => {
