@@ -70,7 +70,7 @@ class Auth {
   }
 
   public checkSession = () =>
-    new Promise(resolve => {
+    new Promise((resolve, reject) => {
       this.auth0 &&
         this.auth0.checkSession({}, (err, authResult) => {
           if (authResult && authResult.accessToken && authResult.idToken) {
@@ -81,6 +81,7 @@ class Auth {
             // User has been logged out from Auth0 server.
             // Remove local session.
             this.localLogout();
+            return reject();
           }
           return resolve();
         });
