@@ -22,11 +22,11 @@ class Auth {
     ? new auth0.WebAuth(config)
     : undefined;
 
-  public login = () => {
+  public login = (options?: auth0.AuthorizeOptions) => {
     if (!isBrowser) return;
     // Save postLoginUrl so we can redirect user back to where they left off after login screen
     localStorage.setItem("postLoginUrl", window.location.pathname);
-    this.auth0 && this.auth0.authorize();
+    this.auth0 && this.auth0.authorize(options);
   };
 
   public handleAuthentication = () =>
