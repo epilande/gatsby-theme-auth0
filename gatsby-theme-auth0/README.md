@@ -94,6 +94,28 @@ src/gatsby-theme-auth0/components/callback.js
 
 Here's a demo of that [`demos/custom/src/gatsby-theme-auth0/components/callback.js`](https://github.com/epilande/gatsby-theme-auth0/blob/master/demos/custom/src/gatsby-theme-auth0/components/callback.tsx)
 
+## Examples
+
+Create a signup page with the [New Universal Login Experience](https://auth0.com/docs/universal-login/new#signup):
+
+```jsx
+import { Link } from "gatsby";
+import React from "react";
+import { AuthService, useAuth } from "gatsby-theme-auth0";
+
+export createAccount () => {
+  const { isLoggedIn } = useAuth();
+  useEffect(() => {
+    if (!isLoggedIn) AuthService.login({ screen_hint: "signup" }); // let user create username and password
+  });
+  if (!isLoggedIn) return <p>Loading...</p>;
+  // once logged in, you can now collect additional profile information, such as name, phone, etc.
+  return (
+    <form>...</form>
+  );
+};
+```
+
 ## Demos
 
 - **Minimal:** [Demo](https://gatsby-theme-auth0.netlify.com/) | [Code](https://github.com/epilande/gatsby-theme-auth0/tree/master/demos/minimal)
