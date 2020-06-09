@@ -81,7 +81,7 @@ class Auth {
             // User has been logged out from Auth0 server.
             // Remove local session.
             this.localLogout();
-            return reject();
+            return reject(err);
           }
           return resolve();
         });
