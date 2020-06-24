@@ -11,6 +11,11 @@ export interface SessionState {
   idToken?: string;
 }
 
+export interface LogoutOptions {
+  returnTo?: string;
+  client_id?: string;
+}
+
 class Auth {
   private accessToken?: string;
   private idToken?: string;
@@ -102,13 +107,15 @@ class Auth {
     });
   };
 
-  public logout = () => {
+  public logout = (opts?: LogoutOptions) => {
     if (!isBrowser) return;
     this.localLogout();
     this.auth0 &&
-      this.auth0.logout({
-        returnTo: window.location.origin,
-      });
+      this.auth0.logout(
+        opts || {
+          returnTo: window.location.origin,
+        },
+      );
   };
 
   public isAuthenticated = () => {

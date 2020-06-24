@@ -28,7 +28,7 @@ const HomePage = () => {
         {isLoading ? (
           <P>Session loading...</P>
         ) : isLoggedIn ? (
-          <Button onClick={AuthService.logout}>Logout</Button>
+          <Button onClick={() => AuthService.logout()}>Logout</Button>
         ) : (
           <Button onClick={AuthService.login}>Login</Button>
         )}
