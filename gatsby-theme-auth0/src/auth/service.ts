@@ -86,6 +86,11 @@ class Auth {
         });
     });
 
+  public changePassword = (options: auth0.ChangePasswordOptions, callback: auth0.Auth0Callback<any>) => {
+      if (!isBrowser) return;
+      this.auth0 && this.auth0.changePassword(options, callback);
+  };
+
   public localLogout = () => {
     if (!isBrowser) return;
     // Remove tokens and user profile
