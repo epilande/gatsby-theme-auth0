@@ -17,7 +17,6 @@ const useAuth = (stateCallback = (_state: SessionState) => {}) => {
       let profile = auth.getUserProfile();
       // If it's past the expiration date of the token, checkSession()
       if (!profile || Date.now() > profile.exp * 1000) {
-        console.debug(`useAuth.useEffect calling checkSession()`);
         await auth.checkSession();
         profile = auth.getUserProfile();
       }
