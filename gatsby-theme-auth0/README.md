@@ -103,7 +103,7 @@ import { Link } from "gatsby";
 import React from "react";
 import { AuthService, useAuth } from "gatsby-theme-auth0";
 
-export createAccount () => {
+export CreateAccount () => {
   const { isLoggedIn } = useAuth();
   useEffect(() => {
     if (!isLoggedIn) AuthService.login({ screen_hint: "signup" }); // let user create username and password
