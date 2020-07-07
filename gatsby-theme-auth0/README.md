@@ -106,7 +106,8 @@ import { AuthService, useAuth } from "gatsby-theme-auth0";
 export CreateAccount () => {
   const { isLoggedIn } = useAuth();
   useEffect(() => {
-    if (!isLoggedIn) AuthService.login({ screen_hint: "signup" }); // let user create username and password
+    // let user create username and password
+    if (!isLoggedIn) AuthService.login({ screen_hint: "signup" }); 
   });
   if (!isLoggedIn) return <p>Loading...</p>;
   // once logged in, you can now collect additional profile information, such as name, phone, etc.
