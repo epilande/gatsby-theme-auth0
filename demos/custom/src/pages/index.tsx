@@ -36,7 +36,7 @@ const HomePage = () => {
       )}
 
       {isLoggedIn ? (
-        <Button onClick={AuthService.logout}>Logout</Button>
+        <Button onClick={() => AuthService.logout()}>Logout</Button>
       ) : (
         <Button onClick={AuthService.login}>Login</Button>
       )}

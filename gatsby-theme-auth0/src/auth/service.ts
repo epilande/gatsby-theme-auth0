@@ -102,13 +102,15 @@ class Auth {
     });
   };
 
-  public logout = () => {
+  public logout = (opts?: auth0.LogoutOptions) => {
     if (!isBrowser) return;
     this.localLogout();
     this.auth0 &&
-      this.auth0.logout({
-        returnTo: window.location.origin,
-      });
+      this.auth0.logout(
+        opts || {
+          returnTo: window.location.origin,
+        },
+      );
   };
 
   public isAuthenticated = () => {
