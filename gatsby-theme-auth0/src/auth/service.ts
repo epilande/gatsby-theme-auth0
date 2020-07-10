@@ -11,11 +11,6 @@ export interface SessionState {
   idToken?: string;
 }
 
-export interface LogoutOptions {
-  returnTo?: string;
-  client_id?: string;
-}
-
 class Auth {
   private accessToken?: string;
   private idToken?: string;
@@ -107,7 +102,7 @@ class Auth {
     });
   };
 
-  public logout = (opts?: LogoutOptions) => {
+  public logout = (opts?: auth0.LogoutOptions) => {
     if (!isBrowser) return;
     this.localLogout();
     this.auth0 &&
