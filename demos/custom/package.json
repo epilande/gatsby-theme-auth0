@@ -14,7 +14,7 @@
     "@emotion/styled": "^10.0.27",
     "gatsby": "^2.19.23",
     "gatsby-plugin-emotion": "^4.1.18",
-    "gatsby-plugin-typescript": "^2.1.23",
+    "gatsby-plugin-typescript": "^2.8.0",
     "gatsby-theme-auth0": "*",
     "gatsby-theme-shared-ui": "*",
     "react": "^16.12.0",
