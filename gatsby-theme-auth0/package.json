@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "auth0-js": "^9.12.2",
-    "gatsby-plugin-typescript": "^2.1.23"
+    "gatsby-plugin-typescript": "^3.3.0"
   },
   "author": "Emmanuel Pilande",
   "license": "MIT",
